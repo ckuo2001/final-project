@@ -102,10 +102,10 @@ function view() {
       for (var i = 0; i < recipeContent.length; i++) {
         let p1 = document.createElement("p");
         let p2 = document.createElement("p");
-        /*p1.append(recipeContent[i].content[0]);
-        p2.append(recipeContent[i].content[1]);
+        p1.append(recipeContent[i][0]);
+        p2.append(recipeContent[i][1]);
         recipePageContent.append(p1);
-        recipePageContent.append(p2);*/
+        recipePageContent.append(p2);
       }
     } else if (document.body.id === 'allRecipsePage') {
       let allRecipesPageContent = document.getElementById("allRecipesPageContent");
@@ -315,29 +315,34 @@ async function getAllMessages() {
     aboutContent.push(msgData);
   });
 
-  const recipeSnapshot = await getDocs(
+  /*const recipeSnapshot = await getDocs(
     query(recipeRef)
-  );
+  );*/
+  let oneRecipeRef = doc(db, "newAllRecipes", "pizza");
+  const docSnap = await getDoc(oneRecipeRef);
+  let steps = docSnap.data();
+  recipeContent.push(Object.values(steps['content']));
+  console.log(recipeContent);
   //console.log(recipeSnapshot);
-  recipeSnapshot.forEach((doc) => {
-    let recipeData = doc.data()['content'];
-    console.log(recipeData);
+  //recipeSnapshot.forEach((doc) => {
+    //let recipeData = doc.data()['content'];
+    //console.log(recipeData.values());
     /*console.log(recipeData);
     recipeData.forEach((doc1) => {
       console.log(doc1.value);
       recipeContent.push(doc1.value);
     });*/
-    for (var i = 0; i < recipeData.size; i++) {
+    //for (var i = 0; i < recipeData.size; i++) {
       //if(recipeData[i] != "") {
         //console.log(recipeData[i]);
         //recipeContent.push(recipeData[i]);
       //}
-    }
-  });
+    //}
+  //});
   render(view(), document.body);
 }
 
-//getAllMessages();
+getAllMessages();
 
 /*onSnapshot(
   collection(db, "introduction"),
