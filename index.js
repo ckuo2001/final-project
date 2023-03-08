@@ -107,7 +107,7 @@ function view() {
         recipePageContent.append(p1);
         recipePageContent.append(p2);
       }
-    } else if (document.body.id === 'allRecipsePage') {
+    } else if (document.body.id === 'allRecipesPage') {
       let allRecipesPageContent = document.getElementById("allRecipesPageContent");
       for (var i = 0 ; i < recipeContent.length; i++) {
         let p1 = document.createElement("p");
