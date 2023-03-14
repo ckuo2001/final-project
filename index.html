@@ -4,18 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template!</title>
+    <title>Food Blog!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="module" crossorigin src="/final-project/assets/index-55317a7b.js"></script>
-    <link rel="stylesheet" href="/final-project/assets/index-165c29b3.css">
+    <script type="module" crossorigin src="/final-project/assets/index-f2f58385.js"></script>
+    <link rel="stylesheet" href="/final-project/assets/index-cd0f94ae.css">
   </head>
   <body id="aboutMePage">
-    <h1>About me page</h1>
-    <div id="aboutPageContent"></div>
-    <a href="src/back.html"><button>access management page here</button></a>
-    <a href="src/recipe.html"><button>access recipe page here</button></a>
-    <a href="src/all-recipes.html"><button>access all recipes here</button></a>
+    <nav class="navbar navbar-light" id="mainNav">
+      <div class="container">
+        <a class="brand" href="index.html">Food Blog</a>
+        <div>
+            <ul class="navigationBar">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="src/all-recipes.html">Recipes</a></li>
+                <li class="nav-item" id="upload"><a href="src/back.html" class="nav-link px-lg-3 py-3 py-lg-4">Upload</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="masthead" style="background-image: url('/final-project/assets/food-blog-header-ebaebb2d.jpg')">
+      <div class="container position-relative">
+          <div class="row">
+              <div class="site-heading">
+                  <h1 class="title">Food Blog</h1>
+                  <span class="subheading">A food blog with many recipes</span>
+              </div>
+          </div>
+      </div>
+    </header>
+    <div class="page-container">
+      <div class="center-content" id="aboutPageContent">
+        <h3>Introduction</h3>
+        <p>
+          Hello! I am Christina and I am a fourth-year student majoring in Human Centered Design & Engineering at the University of Washington. Recently, I just started to cook, so I built this website to keep all of my recipes! Nice to meet you!
+        </p>
+        <h3>Website Navigation</h3>
+        <p>
+          Now you are at the Homepage! If you want to check out all of my recipes, you can click the "Recipes" tab on the navigation bar (upper-right corner). If you are interested in any of the recipes, please click on the name of the recipe to view the steps to make the dish!
+        </p>
+        <h3>Upload a Recipe</h3>
+        <p>Feel free to upload your own recipe by going to the "Upload" page!</p>
+      </div>
+    </div>
     
   </body>
 </html>
