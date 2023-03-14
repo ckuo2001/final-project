@@ -2,18 +2,15 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 80%;
-}
-
 body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
-  font-family: Arial, Helvetica, sans-serif;
   overflow: scroll;
   height: 100%;
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  color: black;
 }
 
 .sign-in {
@@ -122,4 +119,281 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(130, 112, 153);
+}
+
+.picture {
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.picture:hover {
+  filter: brightness(80%);
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  gap: 12px;
+}
+
+.page-container {
+  width: 60%;
+  margin-top: 5rem;
+  margin: auto;
+  position: relative;
+  /*margin-right: 0;*/
+}
+
+.nav {
+  width: 80%;
+  margin: auto;
+  font-size: medium;
+}
+
+.navbar {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.site-heading {
+  text-align: center;
+  color: white;
+}
+
+#mainNav {
+  position: absolute;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  color: white;
+}
+
+.navbar-light .navigationBar .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-light .brand {
+  color: rgb(255, 255, 255);
+}
+
+.brand {
+  margin-right: 0rem;
+}
+
+.navigationBar {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+header.masthead {
+  position: relative;
+  margin-bottom: 3rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+  color: white;
+}
+
+header.masthead .site-heading {
+  color: white;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.title {
+  font-size: 70px;
+}
+
+header.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.5;
+}
+
+ul.nav {
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  justify-content: center;
+}
+
+.projects {
+  padding: 30px;
+}
+
+.about {
+  padding: 50px;
+}
+
+.cheatsheet {
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#writeup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}*/
+
+/*#sidebar header a:hover {
+  color: #fff;
+}*/
+
+#sidebar .nav a {
+  background: none;
+  color: #CFD8DC;
+  font-size: 14px;
+  padding: 16px 24px;
+}
+
+#sidebar .nav a:hover {
+  background: none;
+  color: #ECEFF1;
+}
+
+#sidebar .nav a i {
+  margin-right: 16px;
+}
+
+#back-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#back-nav {
+  color:rgb(23, 19, 32);
+  position: relative;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+.recipeLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.singleRecipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

@@ -4,38 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template!</title>
+    <title>Food Blog!</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body id="backendPage">
-    <h1>backend management page</h1>
-    <p>Input About Content Here:</p>
-    <div id="aboutInputs">
-      <div id="about-1">
-        <p>paragraph title</p>
-        <input type="text" class="array" />
-        <p>paragraph content</p>
-        <input type="text" class="array" />
+    <nav class="navbar navbar-light">
+      <div class="container">
+        <a class="brand" id="back-nav" href="index.html">Food Blog</a>
+        <div>
+          <ul class="navigationBar" id="back-nav">
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="back-nav" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="back-nav" href="all-recipes.html">Recipes</a></li>
+            <li class="nav-item" id="upload"><a href="#" class="nav-link px-lg-3 py-3 py-lg-4" id="back-nav">Upload</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page-container">
+      <div>
+        <p>Input a New Recipe Content Here:</p>
+        <p>Recipe Name</p>
+        <input type="text" id="recipe-name" />
+        <div id="recipeInputs">
+          <div id="1">
+            <p>Step title</p>
+            <input type="text" class="array" />
+            <p>Step content</p>
+            <input type="text" class="array" />
+          </div>
+        </div>
+        <button class="buttons" id="submitRecipe">submit</button>
+        <button class="buttons" id="addRecipeInputBtn">add input box</button>
       </div>
     </div>
-    <button id="submitAbout">submit</button>
-    <button id="addAboutInputBtn">add input box</button>
-
-    <p>Input a New Recipe Content Here:</p>
-    <p>Recipe Name</p>
-    <input type="text" id="recipe-name" />
-    <div id="recipeInputs">
-      <div id="step-1">
-        <p>Step title</p>
-        <input type="text" class="array" />
-        <p>Step content</p>
-        <input type="text" class="array" />
-      </div>
-    </div>
-    <button id="submitRecipe">submit</button>
-    <button id="addRecipeInputBtn">add input box</button>
-    <a href="../index.html"><button>back to about me page</button></a>
     <script src="../index.js" type="module"></script>
   </body>
 </html>
