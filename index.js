@@ -66,9 +66,6 @@ function view() {
         let div = document.createElement("div");
         let p1 = document.createElement("p");
         let a = document.createElement("a");
-        //let img = document.createElement("img");
-        //img.src = "assets/img/plate.png";
-        //img.classList.add("picture");
         a.append(recipeContent[i][0]);
         p1.addEventListener("click", function(clicked) {
           localStorage.setItem("recipeName", clicked.target.innerHTML);
@@ -181,17 +178,3 @@ async function getAllMessages() {
 }
 
 getAllMessages();
-
-function makeOneRecipePage(clicked) {
-  let pageTitle = clicked.target.innerHTML;
-  let content = newRecipeContent.get(pageTitle);
-  content.forEach((step) => {
-    let p1 = document.createElement("p");
-    p1.innerHTML = step[0];
-    let p2 = document.createElement("p");
-    p2.innerHTML = step[0];
-    document.getElementById("recipePageContent").append(p1);
-    document.getElementById("recipePageContent").append(p2);
-  });
-}
-
